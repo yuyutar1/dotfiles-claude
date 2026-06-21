@@ -1,0 +1,13 @@
+claude/settings.private.json
+
+# install.sh が生成する退避ファイル
+*.bak.*
+
+# OS / エディタ
+.DS_Store
+*.swp
+
+# 念のため: 秘密情報を含みうるファイルは追跡しない
+*.local.json
+.env
+.env.*

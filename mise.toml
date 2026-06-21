@@ -1,0 +1,15 @@
+[tools]
+shellcheck = "0.11.0"
+shfmt = "3.13.1"
+
+[tasks.lint]
+description = "shellcheck で install.sh を静的解析"
+run = "shellcheck install.sh"
+
+[tasks.fmt]
+description = "shfmt で install.sh を整形(2-space, case インデント, simplify)"
+run = "shfmt -w -i 2 -ci -s install.sh"
+
+[tasks.check]
+description = "整形差分の確認(CI 向け・書き換えなし)"
+run = "shfmt -d -i 2 -ci -s install.sh && shellcheck install.sh"
