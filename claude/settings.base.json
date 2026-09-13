@@ -11,20 +11,26 @@
   "permissions": {
     "defaultMode": "auto",
     "allow": [
-      "WebSearch",
       "Bash",
-      "WebFetch",
       "Edit",
       "Write",
       "NotebookEdit",
-      "mcp__codegraph__codegraph_explore",
-      "mcp__codegraph__codegraph_search",
-      "mcp__codegraph__codegraph_node",
-      "mcp__codegraph__codegraph_callers",
-      "mcp__codegraph__codegraph_callees",
-      "mcp__codegraph__codegraph_impact",
-      "mcp__codegraph__codegraph_files",
-      "mcp__codegraph__codegraph_status"
+      "WebFetch",
+      "WebSearch",
+      "Agent",
+      "mcp__codegraph",
+      "mcp__claude-in-chrome",
+      "mcp__chrome-devtools",
+      "mcp__supabase__execute_sql",
+      "mcp__supabase__list_tables",
+      "mcp__supabase__list_migrations",
+      "mcp__supabase__list_extensions",
+      "mcp__supabase__search_docs",
+      "mcp__claude_ai_Google_Drive__read_file_content",
+      "mcp__claude_ai_Google_Drive__search_files",
+      "mcp__claude_ai_Google_Drive__get_file_metadata",
+      "mcp__claude_ai_Google_Drive__list_recent_files",
+      "mcp__claude_ai_Google_Drive__download_file_content"
     ],
     "deny": [
       "Read(./.env)",
@@ -33,7 +39,7 @@
       "Read(./**/.env.*)",
       "Read(./**/secrets/**)",
       "Read(~/.ssh/**)",
-      "Read(~/.aws/**)",
+      "Read(~/.aws/credentials)",
       "Bash(rm -rf /:*)"
     ]
   },
@@ -66,5 +72,13 @@
   "theme": "dark-daltonized",
   "preferredNotifChannel": "terminal_bell",
   "remoteControlAtStartup": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "language": "Japanese",
+  "model": "claude-fable-5-1[1m]",
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "voiceEnabled": true
 }

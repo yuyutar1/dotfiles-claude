@@ -25,5 +25,5 @@ git clone <this-repo> dotfiles-claude && cd dotfiles-claude
 
 ## ポイント
 
-- **権限**: `defaultMode: "auto"`(安全チェック付きの自動承認)。`deny` で `.env` / `secrets` / `~/.ssh` / `~/.aws` の読み取りと `rm -rf /` を恒久ブロック。
+- **権限**: `defaultMode: "auto"`。プロンプトが出うる組み込みツールと MCP は `allow` で確認なし。`deny` で `.env` / `secrets` / `~/.ssh` / `~/.aws/credentials` の読み取りとルート再帰削除を恒久ブロック。
 - **通知**: `Notification` / `Stop` で `notify.py` が macOS 通知(プロジェクト名・セッションID・内容を表示、柔らかい音)。音は `notify.py` 冒頭の定数で変更可。
